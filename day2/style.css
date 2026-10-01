@@ -1,0 +1,145 @@
+*,
+*::before
+*::after {
+box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background-color: #f4f4f9; /* Soft background to highlight white cards */
+  color: #333;
+}
+
+header {
+  background-color: #008080;
+  color: white;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+header h1 {
+  margin: 0 0 5px 0;
+}
+
+header p {
+  margin: 0 0 15px 0;
+  color: #ccc;
+}
+
+nav {
+  display: flex; 
+  justify-content: center;
+  gap: 16px;
+}
+
+nav a {
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.2s ease;
+}
+
+nav a:hover {
+  color: aquamarine;
+  text-decoration: underline;
+}
+
+main {
+  max-width: 640px;
+  margin: 20px auto;
+  padding: 0 15px;
+}
+
+section {
+  background-color: white; /* Required white card look */
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* 5. Features Grid Layout (CSS Grid responsive cards) */
+.features {
+  display: grid;
+  /* Required responsive column layout sizing rules */
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+  padding: 0;
+  list-style-type: none; /* Strip standard bullet symbols */
+}
+
+.features li {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 15px;
+  text-align: center;
+}
+
+/* 6. Keyboard Shortcuts Table Layout */
+table {
+  width: 100%;
+  border-collapse: collapse; /* Prevents double border layouts */
+  margin-top: 10px;
+}
+
+th, td {
+  border: 1px solid #ddd;   /* Required cell borders */
+  padding: 10px;            /* Required cell padding */
+  text-align: left;
+}
+
+th {
+  background-color: #f1f1f1;
+}
+
+/* 7. Feedback Form (Vertically stacked full-width fields) */
+form p {
+  margin-bottom: 15px;
+}
+
+form label {
+  display: block;           /* Pushes labels onto their own line */
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+/* Styles fields to fill input area fully */
+form input[type="text"],
+form input[type="email"],
+form textarea {
+  width: 100%;              /* Required full width layout style */
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* 8. Button Layout & Hover Interaction Transitions */
+button {
+  background-color: #775a73;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  /* Smooth transform/background transition rules */
+  transition: background-color 0.2s ease, transform 0.2s ease; 
+}
+
+button:hover {
+  background-color: #5e445a; /* Shifts background shade darker on hover */
+  transform: translateY(-1px); /* Slight bounce upward motion shift */
+}
+
+/* 9. Small Display Screen Rules Media Query */
+@media (max-width: 600px) {
+  header {
+    font-size: small;       /* Reduces header font size */
+    padding: 10px;          /* Reduces padding layout parameters */
+  }
+}
